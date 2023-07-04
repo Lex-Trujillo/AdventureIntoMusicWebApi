@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player With Volume/Gain Control</title>
+
+    <link rel="stylesheet" href="index.css">
+
+    <script src="index.js" defer></script>
+</head>
+<body>
+
+    <audio src="sunnyboy.mp3"></audio>
+
+    <button data-playing="false" class="tape-controls-play" role="switch" aria-checked="false">
+        <span>Play/Pause</span>
+    </button>
+
+    <input type="range" id="volume" class="control-volume" min="0" max="2" value="1" list="gain-vals" step="0.01" data-action="volume" />
+    
+</body>
+</html>
