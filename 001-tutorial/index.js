@@ -24,12 +24,15 @@ playButton.addEventListener(
         // the dataset.playing value was set to false in the HTML
         audioElement.play();
         playButton.dataset.playing = "true"; // set the attribute to true so if the user clicks the button again we know to pause
+
+        // tell the browser to use the default destination (usually the speakers or headphones)
+        track.connect(audioCtx.destination);
+
       } else if (playButton.dataset.playing === "true") {
         audioElement.pause();
         playButton.dataset.playing = "false";
       }
-      // tell the browser to use the default destination (usually the speakers or headphones)
-      track.connect(audioCtx.destination);
+
     },
     false
   );
